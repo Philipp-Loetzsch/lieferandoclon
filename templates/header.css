@@ -1,0 +1,15 @@
+header{
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    button{
+        background-color: transparent;
+        border:none;
+    }
+}
+#logo{
+    display: flex;
+    align-items: center;
+}
