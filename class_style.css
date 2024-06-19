@@ -1,0 +1,11 @@
+.headicons{
+    width: 20px;
+}
+.center{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.w-25{
+    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.3) inset;
+}

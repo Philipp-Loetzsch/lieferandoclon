@@ -1,4 +1,4 @@
-header{
+/* header{
     background-color: orange;
     display: flex;
     align-items: center;
@@ -9,7 +9,15 @@ header{
         border:none;
     }
 }
+    */
 #logo{
+  width: 50px;
+} 
+
+nav{
+    background-color: orange;
+}
+.navbar-brand {
     display: flex;
     align-items: center;
 }
