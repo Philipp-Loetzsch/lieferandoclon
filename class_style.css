@@ -7,5 +7,51 @@
     gap: 4px;
 }
 .w-25{
+    width: 25%;
     box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.3) inset;
+    
+}
+.w-75{
+    width: 75%;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.m-24{
+margin: 0 24px;
+}
+.dishcard{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+.dishselection{
+margin: 0 24px;
+img{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+}
+.ordercard{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 8px 0;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    box-sizing: border-box;
+    background-color: white;
+    button{
+        background-color: transparent;
+        border:0.5px solid rgba(0, 0, 0, 0.397);
+        border-radius: 5px;
+        font-size: 24px;
+        color: rgb(0, 0, 0);
+    }
 }

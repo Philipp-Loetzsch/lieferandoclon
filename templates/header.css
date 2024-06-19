@@ -1,23 +1,20 @@
-/* header{
-    background-color: orange;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    button{
-        background-color: transparent;
-        border:none;
-    }
+header {
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
 }
-    */
-#logo{
-  width: 50px;
-} 
 
-nav{
-    background-color: orange;
-}
-.navbar-brand {
+#logo {
     display: flex;
     align-items: center;
+  img {
+    width: 40px;
+  }
 }
