@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./templates/header.css" />
     <link rel="stylesheet" href="./templates/footer.css" />
     <link rel="stylesheet" href="class_style.css" />
+    <link rel="stylesheet" href="index_media.css" />
     <script src="onload.js"></script>
     <script src="script.js"></script>
   </head>
@@ -17,45 +18,50 @@
     <header w3-include-html="./templates/header.html"></header>
 
     <main>
-      <section class="w-75">
+      <section class="w-100">
         <article id="pictureHead">
           <img src="./assets/img/head.jpg" alt="" />
         </article>
-        <article id="storeHeadline">
-          <h2>Feinschmecker Sachsen</h2>
-          <div class="center">
-            <img
-              class="headicons"
-              src="./assets/img/star.png"
-              alt="star"
-            /><span>4.7 (300+)</span>
+        <article id="store">
+          <div class="m-24 store-headline">
+            <h3>Feinschmecker Sachsen</h3>
+            <div class="center mb-8">
+              <img
+                class="headicons"
+                src="./assets/img/star.png"
+                alt="star"
+              /><span>4.7 (300+)</span>
+            </div>
+            <div class="center mb-8">
+              <img class="headicons" src="./assets/img/bag.png" alt="bag" />
+              <span>Min. 15,00€ </span>
+              <img src="./assets/img/dot.svg" alt="dot" />
+              <img
+                class="headicons"
+                src="./assets/img/bicycle.png"
+                alt="bicycle"
+              /><span>1,50€</span>
+            </div>
+            <div class="scroll-bar">
+              <button class="scroll-btn"><img src="./assets/img/left.png" alt=""></button>
+              <div id="shortcuts">
+                <button><a href="#soups">Suppen</a></button>
+                <button><a href="#salat">Salate</a></button>
+                <button><a href="#fish">Fisch</a></button>
+                <button><a href="#cow">Rind</a></button>
+                <button><a href="#pork">Schwein</a></button>
+                <button><a href="#noodle">Nudeln</a></button>
+                <button><a href="#dessert">Desserts</a></button>
+                <button><a href="#drink">Getränke</a></button>
+              </div>
+              <button class="scroll-btn"><img src="./assets/img/right.png" alt=""></button>
+            </div>
           </div>
-          <div class="center">
-            <img class="headicons" src="./assets/img/bag.png" alt="bag" />
-            <span>Min. 15,00€ </span>
-            <img src="./assets/img/dot.svg" alt="dot" />
-            <img
-              class="headicons"
-              src="./assets/img/bicycle.png"
-              alt="bicycle"
-            /><span>1,50€</span>
-          </div>
-
-          <div id="shortcuts">
-            <button><a href="#soups">Suppen</a></button>
-            <button><a href="#salat">Salate</a></button>
-            <button><a href="#fish">Fisch</a></button>
-            <button><a href="#cow">Rind</a></button>
-            <button><a href="#pork">Schwein</a></button>
-            <button><a href="#noodle">Nudeln</a></button>
-            <button><a href="#dessert">Desserts</a></button>
-            <button><a href="#drink">Getränke</a></button>
-          </div>
-        </article>
-        <article id="dishes">
+          <!--  </article>
+        <article id="dishes"> -->
           <div class="dishselection">
             <img id="soups" src="./assets/img/soup.jpg" alt="Suppe" />
-            <div class="m-24">
+            <div>
               <h3>Suppen</h3>
               <span
                 >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
@@ -75,86 +81,87 @@
               </div>
             </div>
             <img id="salat" src="./assets/img/salat.jpg" alt="Salate" />
-            <div class="m-24">
-                <h3>Salate</h3>
-                <span
-                  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                  autem quia necessitatibus beatae nihil incidunt, numquam
-                  corrupti at molestiae sit ad quas inventore, dolores aut
-                  accusantium repudiandae commodi? Ad, omnis?</span
-                >
-              </div>
+            <div>
+              <h3>Salate</h3>
+              <span
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
+                autem quia necessitatibus beatae nihil incidunt, numquam
+                corrupti at molestiae sit ad quas inventore, dolores aut
+                accusantium repudiandae commodi? Ad, omnis?</span
+              >
+            </div>
             <div id="chooseSalats"></div>
             <img id="fish" src="./assets/img/fish.jpg" alt="Fisch" />
-            <div class="m-24">
-                <h3>Fischgerichte</h3>
-                <span
-                  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                  autem quia necessitatibus beatae nihil incidunt, numquam
-                  corrupti at molestiae sit ad quas inventore, dolores aut
-                  accusantium repudiandae commodi? Ad, omnis?</span
-                >
-              </div>
+            <div>
+              <h3>Fischgerichte</h3>
+              <span
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
+                autem quia necessitatibus beatae nihil incidunt, numquam
+                corrupti at molestiae sit ad quas inventore, dolores aut
+                accusantium repudiandae commodi? Ad, omnis?</span
+              >
+            </div>
             <div id="choosefishes"></div>
             <img id="cow" src="./assets/img/cow.jpg" alt="Cow" />
-            <div class="m-24">
-                <h3>Rindfleisch</h3>
-                <span
-                  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                  autem quia necessitatibus beatae nihil incidunt, numquam
-                  corrupti at molestiae sit ad quas inventore, dolores aut
-                  accusantium repudiandae commodi? Ad, omnis?</span
-                >
-              </div>
+            <div>
+              <h3>Rindfleisch</h3>
+              <span
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
+                autem quia necessitatibus beatae nihil incidunt, numquam
+                corrupti at molestiae sit ad quas inventore, dolores aut
+                accusantium repudiandae commodi? Ad, omnis?</span
+              >
+            </div>
             <div id="chooseCows"></div>
             <img id="pork" src="./assets/img/pork.jpg" alt="Pork" />
-            <div class="m-24">
-                <h3>Schwein</h3>
-                <span
-                  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                  autem quia necessitatibus beatae nihil incidunt, numquam
-                  corrupti at molestiae sit ad quas inventore, dolores aut
-                  accusantium repudiandae commodi? Ad, omnis?</span
-                >
-              </div>
+            <div>
+              <h3>Schwein</h3>
+              <span
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
+                autem quia necessitatibus beatae nihil incidunt, numquam
+                corrupti at molestiae sit ad quas inventore, dolores aut
+                accusantium repudiandae commodi? Ad, omnis?</span
+              >
+            </div>
             <div id="choosePorks"></div>
             <img id="noodle" src="./assets/img/noodle.jpg" alt="Noodles" />
-            <div class="m-24">
-                <h3>Nudeln</h3>
-                <span
-                  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                  autem quia necessitatibus beatae nihil incidunt, numquam
-                  corrupti at molestiae sit ad quas inventore, dolores aut
-                  accusantium repudiandae commodi? Ad, omnis?</span
-                >
-              </div>
+            <div>
+              <h3>Nudeln</h3>
+              <span
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
+                autem quia necessitatibus beatae nihil incidunt, numquam
+                corrupti at molestiae sit ad quas inventore, dolores aut
+                accusantium repudiandae commodi? Ad, omnis?</span
+              >
+            </div>
             <div id="chooseNoodles"></div>
             <img id="dessert" src="./assets/img/desserts.jpg" alt="Dessert" />
-            <div class="m-24">
-                <h3>Desserts</h3>
-                <span
-                  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                  autem quia necessitatibus beatae nihil incidunt, numquam
-                  corrupti at molestiae sit ad quas inventore, dolores aut
-                  accusantium repudiandae commodi? Ad, omnis?</span
-                >
-              </div>
+            <div>
+              <h3>Desserts</h3>
+              <span
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
+                autem quia necessitatibus beatae nihil incidunt, numquam
+                corrupti at molestiae sit ad quas inventore, dolores aut
+                accusantium repudiandae commodi? Ad, omnis?</span
+              >
+            </div>
             <div id="chooseDessets"></div>
             <img id="drink" src="./assets/img/drinks.jpg" alt="Drinks" />
-            <div class="m-24">
-                <h3>Getränke</h3>
-                <span
-                  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                  autem quia necessitatibus beatae nihil incidunt, numquam
-                  corrupti at molestiae sit ad quas inventore, dolores aut
-                  accusantium repudiandae commodi? Ad, omnis?</span
-                >
-              </div>
+            <div>
+              <h3>Getränke</h3>
+              <span
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
+                autem quia necessitatibus beatae nihil incidunt, numquam
+                corrupti at molestiae sit ad quas inventore, dolores aut
+                accusantium repudiandae commodi? Ad, omnis?</span
+              >
+            </div>
             <div id="chooseDrinks"></div>
           </div>
+          <button class="responsivebasket" tabindex="-1">Warenkorb</button>
         </article>
       </section>
-      <section class="w-25">
+      <section class="basket-side">
         <article id="basket">
           <div class="center mt-10">
             <img id="wagon" src="./assets/img/wagon.png" alt="wagon" />

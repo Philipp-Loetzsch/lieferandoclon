@@ -9,10 +9,14 @@
   }
 }
 
-#storeHeadline {
+#store {
   width: 100%;
   padding: 0 24px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 #basket {
   position: sticky;
@@ -22,15 +26,20 @@
   align-items: center;
 }
 #shortcuts {
+  overflow: hidden;
+  display: flex;
   button {
-    border-radius: 10px;
+    background-color: transparent;
+    border: none;
     padding: 0;
     box-sizing: border-box;
-    width: 80px;
+    min-width: 80px;
     height: 24px;
+   
   }
   button:hover {
-    box-shadow: 1px 2px 2px black;
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius: 10px;
   }
   a {
     display: flex;
@@ -40,11 +49,6 @@
     text-decoration: none;
     color: black;
   }
-}
-#dishes {
-  width: 100%;
-  background-color: rgba(211, 211, 211, 0.2);
-
 }
 #wagon{
     width: 30px;

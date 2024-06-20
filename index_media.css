@@ -1,0 +1,8 @@
+@media screen and (max-width: 750px) {
+    .responsivebasket{
+        display: flex;
+    }
+    .basket-side{
+        display: none;
+    }
+}
