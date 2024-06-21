@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="index_media.css" />
     <script src="onload.js"></script>
     <script src="script.js"></script>
+    <script src="content.js"></script>
+    <script src="templates.js"></script>
   </head>
-  <body onload="includeHTML()">
+  <body onload="includeHTML(); showDishes()">
     <header w3-include-html="./templates/header.html"></header>
 
     <main>
@@ -43,7 +45,9 @@
               /><span>1,50€</span>
             </div>
             <div class="scroll-bar">
-              <button class="scroll-btn"><img src="./assets/img/left.png" alt=""></button>
+              <button class="scroll-btn">
+                <img src="./assets/img/left.png" alt="" />
+              </button>
               <div id="shortcuts">
                 <button><a href="#soups">Suppen</a></button>
                 <button><a href="#salat">Salate</a></button>
@@ -54,7 +58,9 @@
                 <button><a href="#dessert">Desserts</a></button>
                 <button><a href="#drink">Getränke</a></button>
               </div>
-              <button class="scroll-btn"><img src="./assets/img/right.png" alt=""></button>
+              <button class="scroll-btn">
+                <img src="./assets/img/right.png" alt="" />
+              </button>
             </div>
           </div>
           <div class="dishselection">
@@ -68,16 +74,7 @@
                 accusantium repudiandae commodi? Ad, omnis?</span
               >
             </div>
-            <div id="chooseSoups">
-              <div class="ordercard">
-                <div class="dishcard">
-                  <h4><b> Gericht Name </b></h4>
-                  <span>Beschreibung</span>
-                  <h5><b>preis €</b></h5>
-                </div>
-                <div><button>+</button></div>
-              </div>
-            </div>
+            <div id="chooseSoups"></div>
             <img id="salat" src="./assets/img/salat.jpg" alt="Salate" />
             <div>
               <h3>Salate</h3>
@@ -156,7 +153,6 @@
             </div>
             <div id="chooseDrinks"></div>
           </div>
-         
         </article>
         <button class="responsivebasket" tabindex="-1">Warenkorb</button>
       </section>
