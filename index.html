@@ -20,7 +20,7 @@
     <header w3-include-html="./templates/header.html"></header>
 
     <main>
-      <section class="w-100">
+      <section class="w-100 oh">
         <article id="pictureHead">
           <img src="./assets/img/head.jpg" alt="" />
         </article>
@@ -96,8 +96,8 @@
                 accusantium repudiandae commodi? Ad, omnis?</span
               >
             </div>
-            <div id="choosefishes"></div>
-            <img id="cow" src="./assets/img/cow.jpg" alt="Cow" />
+            <div id="chooseFishes"></div>
+            <img id="beef" src="./assets/img/cow.jpg" alt="Cow" />
             <div>
               <h3>Rindfleisch</h3>
               <span
@@ -107,7 +107,7 @@
                 accusantium repudiandae commodi? Ad, omnis?</span
               >
             </div>
-            <div id="chooseCows"></div>
+            <div id="chooseBeefs"></div>
             <img id="pork" src="./assets/img/pork.jpg" alt="Pork" />
             <div>
               <h3>Schwein</h3>
@@ -140,7 +140,7 @@
                 accusantium repudiandae commodi? Ad, omnis?</span
               >
             </div>
-            <div id="chooseDessets"></div>
+            <div id="chooseDesserts"></div>
             <img id="drink" src="./assets/img/drinks.jpg" alt="Drinks" />
             <div>
               <h3>Getränke</h3>
@@ -154,7 +154,7 @@
             <div id="chooseDrinks"></div>
           </div>
         </article>
-        <button class="responsivebasket" tabindex="-1">Warenkorb</button>
+   
       </section>
       <section class="basket-side">
         <article id="basket">
@@ -166,9 +166,24 @@
             <img src="./assets/img/bicycle.png" alt="bicycle" />
             <span>Lieferung 25-60 min </span>
           </div>
+          <div id="orderBasket">
+            <div>Gericht</div>
+            <div>Preis</div>
+            <div>Anzahl</div>
+            <button>+</button>
+            <button>-</button>
+            <button>trash</button>
+          </div>
+          <div id="sum">
+            <span>Bestellsumme:</span> <div>Summe</div>
+            <span>Lieferkosten:</span> <div>1,50</div>
+            <span>Gesamtpreis:</span>
+          </div>
         </article>
+      
       </section>
     </main>
+    <button class="responsivebasket" tabindex="-1">Warenkorb</button>
     <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>

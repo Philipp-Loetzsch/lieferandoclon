@@ -53,3 +53,8 @@
 #wagon{
     width: 30px;
 }
+#orderBasket{
+  display: flex;
+  margin-top: 24px;
+  gap: 8px;
+}
