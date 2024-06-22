@@ -8,7 +8,7 @@ function showDishes() {
     
     for(let j = 0; j < items.length; j++){
     let item = items[j];
-    container.innerHTML += createOrderCard(j, item);
+    container.innerHTML += createOrderCard(item);
     }
   }
 }
