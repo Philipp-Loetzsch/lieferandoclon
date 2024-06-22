@@ -13,8 +13,8 @@ let soups = [
 let salats = [
   {
       dish : ["Gemischter salat",""],
-      description:[],
-      price:[]
+      description:["Blattsalat mit Tomate und Gurke"],
+      price:[2.50]
   }
 ]
 let fishes = [

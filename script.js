@@ -19,4 +19,8 @@ function showDishes() {
     let contentsoup = soups[i];
     soup.innerHTML += order(i, contentsoup);
  };
+ for (let i = 0; i < salats.length; i++) {
+  let contentsalat = salats[i];
+  salat.innerHTML += order(i, contentsalat);
+};
 }
