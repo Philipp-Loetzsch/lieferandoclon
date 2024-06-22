@@ -36,7 +36,7 @@ let menus = {
     {
       dish: ["Schweinebraten"],
       description: ["Bio-Schweinefleisch mit Kartoffeln und Gemüse"],
-      price: []
+      price: [4.60]
     }
   ],
   noodles: [
