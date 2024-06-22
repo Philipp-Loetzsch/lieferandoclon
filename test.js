@@ -1,96 +1,89 @@
-let menus = {
-  soups: [
-    {
-      dish: ["Gemüsesuppe"],
-      description: ["Suppe mit frischem Gemüse aus kontrolliertem Anbau"],
-      price: [1.2],
-    },
-    {
-      dish: ["Spargelcremesuppe"],
-      description: ["Suppe aus frischem Spargel"],
-      price: [3.2],
-    },
-  ],
-  salats: [
-    {
-      dish: ["Gemischter Salat"],
-      description: ["Blattsalat mit Tomate und Gurke"],
-      price: [2.5],
-    },
-  ],
-  fishes: [
-    {
-      dish: ["Lachsfilet"],
-      description: ["Frisches Lachsfilet in Spinat-Rahmsoße"],
-      price: [6.8],
-    },
-  ],
-  beefs: [
-    {
-      dish: ["Rinderhacksteak"],
-      description: [
-        "Gehacktes Rindfleisch mit Kartoffeln, Gemüße und brauner Soße",
-      ],
-      price: [5.4],
-    },
-  ],
-  porks: [
-    {
-      dish: ["Schweinebraten"],
-      description: ["Bio-Schweinefleisch mit Kartoffeln und Gemüse"],
-      price: [4.60],
-    },
-  ],
-  noodles: [
-    {
-      dish: ["Nudeln mit Tomatensoße"],
-      description: ["Spirelli mit Tomatensoße und Käse"],
-      price: [1.5],
-    },
-  ],
-  desserts: [
-    {
-      dish: ["Eis"],
-      description: ["3 Kugeln Eis (Vanille, Schokolade und Erdbeere"],
-      price: [2.3],
-    },
-  ],
-  drinks: [
-    {
-      dish: ["Cola"],
-      description: ["0,5l Flasche Cola"],
-      price: [2.5],
-    },
-  ],
-};
-
-function showDishes() {
-  let categories = ["soups", "salats", "fishes", "beefs", "porks", "noodles", "desserts", "drinks",];
-  for (let i = 0; i < categories.length; i++) {
-    let category = categories[i];
-    let container = document.getElementById(`choose${category}`);
-    let items = menus[category];
-    container.innerHTML = "";
-    
-    for(let j = 0; j < items.length; j++){
-    let item = items[j];
-    container.innerHTML += createOrderCard(j, item);
-    }
-  }
-}
+let dishes = [];
+let prices = [];
+let amounts =[];
 
 function createOrderCard(j, item) {
+  let price = parseFloat(item.price);
+  let formattedPrice = price.toFixed(2).replace(".", ",");
   return /* html */ `
       <div class="ordercard">
-        <div class="dishcard">
+        <div id="dishcard${item.dish}" class="dishcard">
           <h4><b>${item.dish}</b></h4>
           <span>${item.description}</span>
-          <h5><b>${item.price} €</b></h5>
+          <h5><b>${formattedPrice} €</b></h5>
         </div>
-        <div><button onclick="addToBasket(${j})">+</button></div>
+        <div><button onclick="addToBasket('${item.dish}',${item.price})">+</button></div>
       </div>`;
 }
 
-function addToBasket(index) {
-  // Funktion zum Hinzufügen zum Warenkorb
+function addToBasket(dish, price) {
+  let index = dishes.indexOf(dish);
+  if (index == -1) {
+    dishes.push(dish);
+    prices.push(price);
+    amounts.push(1);
+  } else {
+    prices[index] += price;
+    amounts[index] += 1;
+  }
+  
+  let basket = document.getElementById(`orderBasket`);
+  basket.innerHTML = "";
+  for (let i = 0; i < dishes.length; i++) {
+    let formattedPrice = prices[i].toFixed(2).replace(".", ",");
+    basket.innerHTML += /* html */ `
+      <div>
+        <div>${dishes[i]}</div>
+        <div>${formattedPrice} €</div>
+        <div>${amounts[i]}</div>
+        <div>
+          <button onclick="addToBasket('${dishes[i]}', ${prices[i] / amounts[i]})">+</button>
+          <button onclick="removeFromBasket('${dishes[i]}', ${prices[i] / amounts[i]})">-</button>
+          <button onclick="removeDishFromBasket('${dishes[i]}')">trash</button>
+        </div>
+      </div>`;
+  }
+}
+
+function removeFromBasket(dish, price) {
+  let index = dishes.indexOf(dish);
+  if (index != -1) {
+    prices[index] -= price;
+    amounts[index] -= 1;
+    if (amounts[index] <= 0) {
+      dishes.splice(index, 1);
+      prices.splice(index, 1);
+      amounts.splice(index, 1);
+    }
+    updateBasket();
+  }
+}
+
+function removeDishFromBasket(dish) {
+  let index = dishes.indexOf(dish);
+  if (index != -1) {
+    dishes.splice(index, 1);
+    prices.splice(index, 1);
+    amounts.splice(index, 1);
+    updateBasket();
+  }
+}
+
+function updateBasket() {
+  let basket = document.getElementById(`orderBasket`);
+  basket.innerHTML = "";
+  for (let i = 0; i < dishes.length; i++) {
+    let formattedPrice = prices[i].toFixed(2).replace(".", ",");
+    basket.innerHTML += /* html */ `
+      <div>
+        <div>${dishes[i]}</div>
+        <div>${formattedPrice} €</div>
+        <div>${amounts[i]}</div>
+        <div>
+          <button onclick="addToBasket('${dishes[i]}', ${prices[i] / amounts[i]})">+</button>
+          <button onclick="removeFromBasket('${dishes[i]}', ${prices[i] / amounts[i]})">-</button>
+          <button onclick="removeDishFromBasket('${dishes[i]}')">trash</button>
+        </div>
+      </div>`;
+  }
 }
