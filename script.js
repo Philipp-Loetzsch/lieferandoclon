@@ -15,8 +15,8 @@ function showDishes() {
   noodle.innerHTML = "";
   dessert.innerHTML = "";
   drink.innerHTML = "";
-  for (let i = 0; i < menu.length; i++) {
-    let contentMenu = menu[i];
-    soup.innerHTML += order(i, contentMenu);
+  for (let i = 0; i < soups.length; i++) {
+    let contentsoup = soups[i];
+    soup.innerHTML += order(i, contentsoup);
  };
 }
