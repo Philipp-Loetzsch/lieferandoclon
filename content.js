@@ -20,36 +20,36 @@ let salats = [
 let fishes = [
   {
       dish : ["Lachsfilet",""],
-      description:[],
-      price:[]
+      description:["Frisches Lachsfilet in Spinat-Rahmsoße"],
+      price:[6.80]
   }
 ]
-let cows = [
+let beefs = [
   {
       dish : ["Rinderhacksteak",""],
-      description:[],
-      price:[]
+      description:["Gehacktes Rindfleisch mit Kartoffeln, Gemüße und brauner Soße"],
+      price:[5.40]
   }
 ]
 let porks = [
   {
       dish : ["Schweinebraten",""],
-      description:[],
+      description:["Bio-Schweinefleisch mit Kartoffeln und Gemüse"],
       price:[]
   }
 ]
 let noodles = [
   {
       dish : ["Nudeln mit Tomatensoße",""],
-      description:[],
-      price:[]
+      description:["Spirelli mit Tomatensoße und Käse"],
+      price:[1.50]
   }
 ]
 let desserts = [
   {
       dish : ["Eis",""],
-      description:[],
-      price:[]
+      description:["3 Kugeln Eis (Vanille, Schokolade und Erdbeere"],
+      price:[2.30]
   }
 ]
 let drinks = [
