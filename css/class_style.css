@@ -93,7 +93,7 @@
 }
 .btn-basket{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   button{

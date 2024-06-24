@@ -143,8 +143,8 @@
 
 #closeBtn{
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   align-self: flex-end;
   margin: 20px;
 }
@@ -155,13 +155,15 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #ffffff; 
+  background: #b4b3b3; 
+  border-radius: 5px;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #f39f04; 
   border-radius: 10px;
+  border: #1f1c18;
 }
 
 /* Handle on hover */
