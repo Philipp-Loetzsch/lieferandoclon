@@ -1,10 +1,4 @@
-let dishes = [];
-let prices = [];
-let amounts = [];
-
-function createOrderCard(item) {
-  let price = parseFloat(item.price);
-  let formattedPrice = price.toFixed(2).replace(".", ",");
+function createOrderCard(item, formattedPrice) {
   return /* html */ `
       <div class="ordercard">
         <div id="dishcard${item.dish}" class="dishcard">
@@ -16,58 +10,27 @@ function createOrderCard(item) {
       </div>`;
 }
 
-function addToBasket(dish, price) {
-  let index = dishes.indexOf(dish);
-  if (index == -1) {
-    dishes.push(dish);
-    prices.push(price);
-    amounts.push(1);
-  } else {
-    prices[index] += price;
-    amounts[index] += 1;
-  }
-  updateBasket();
-}
-
-function removeFromBasket(dish, price) {
-  let index = dishes.indexOf(dish);
-  if (index != -1) {
-    prices[index] -= price;
-    amounts[index] -= 1;
-    if (amounts[index] <= 0) {
-      dishes.splice(index, 1);
-      prices.splice(index, 1);
-      amounts.splice(index, 1);
-    }
-    updateBasket();
-  }
-}
-
-function removeDishFromBasket(dish) {
-  let index = dishes.indexOf(dish);
-  if (index != -1) {
-    dishes.splice(index, 1);
-    prices.splice(index, 1);
-    amounts.splice(index, 1);
-    updateBasket();
-  }
-}
-
-function updateBasket() {
-  let basket = document.getElementById(`orderBasket`);
-  basket.innerHTML = "";
-  for (let i = 0; i < dishes.length; i++) {
-    let formattedPrice = prices[i].toFixed(2).replace(".", ",");
-    basket.innerHTML += /* html */ `
-      <div>
-        <div>${dishes[i]}</div>
+function createBasket(i, formattedPrice) {
+  return /* html */ `
+      <div class="basket-content">
+        <div> <b>${amounts[i]}</b> </div>
+        <div> <b> ${dishes[i]}</b> </div>
         <div>${formattedPrice} €</div>
-        <div>${amounts[i]}</div>
-        <div>
-          <button onclick="addToBasket('${dishes[i]}', ${prices[i] / amounts[i]})">+</button>
+      </div>
+        <div class="btn-basket">
+          <button onclick="removeDishFromBasket('${dishes[i]}')"><img src="./assets/img/trash.png" alt="trash"></button>
           <button onclick="removeFromBasket('${dishes[i]}', ${prices[i] / amounts[i]})">-</button>
-          <button onclick="removeDishFromBasket('${dishes[i]}')">trash</button>
+          <div>x ${amounts[i]}</div>
+          <button onclick="addToBasket('${dishes[i]}', ${prices[i] / amounts[i]})">+</button>
         </div>
-      </div>`;
-  }
+       `;
+}
+
+function createSum(totalSum, formattedTotalSum) {
+  return /* html */ ` 
+  <div class="sum">
+  <div> <span>Zwischensumme:</span> <div>${formattedTotalSum}€</div></div>
+     <div> <span>Lieferkosten:</span> <span>1,50€</span></div>
+     <div> <span>Gesamtpreis:</span> <div>${(totalSum+1.50)}€</div> </div>
+  </div>`;
 }

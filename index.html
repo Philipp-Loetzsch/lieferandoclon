@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="index_media.css" />
     <!-- <script src="test.js"></script> -->
     <script src="templates.js"></script>
+    <script src="local_storage.js"></script>
     <script src="onload.js"></script>
     <script src="script.js"></script>
     <script src="content.js"></script>
+    <script src="basket.js"></script>
     
   </head>
-  <body onload="includeHTML(); showDishes()">
+  <body onload="includeHTML(); showDishes(); loadLocal()">
     <header w3-include-html="./templates/header.html"></header>
 
     <main>
@@ -168,14 +170,8 @@
             <img src="./assets/img/bicycle.png" alt="bicycle" />
             <span>Lieferung 25-60 min </span>
           </div>
-          <div id="orderBasket">
-            
-          </div>
-          <div id="sum">
-            <span>Bestellsumme:</span> <div>Summe</div>
-            <span>Lieferkosten:</span> <div>1,50</div>
-            <span>Gesamtpreis:</span>
-          </div>
+          <div id="orderBasket" class="w-100"></div>
+          <div id="sum"></div>
         </article>
       
       </section>
