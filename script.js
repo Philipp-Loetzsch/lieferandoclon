@@ -13,14 +13,17 @@ function showDishes() {
       container.innerHTML += createOrderCard(item, formattedPrice);
     }
   }
+  updateResponsiveBasketButton();
 }
 
-function updateSum(orderSum) {
+function updateSum(orderSum, orderResponsiveSum) {
   let subTotal = prices.reduce((acc, curr) => acc + parseFloat(curr), 0);
   let totalSum = subTotal + 1.5;
   let formattedTotalSum = totalSum.toFixed(2).replace(".", ",");
   let formattedSubTotal = subTotal.toFixed(2).replace(".", ",");
   orderSum.innerHTML = createSum(formattedTotalSum, formattedSubTotal);
+  orderResponsiveSum.innerHTML = createSum(formattedTotalSum, formattedSubTotal);
+  
 }
 
 function orderDone() {
@@ -33,7 +36,8 @@ function orderDone() {
   }
 }
 
-function showResponsiveBasket(){
-  let responsiveBasket = document.getElementById(`responsiveBasket`);
-  responsiveBasket = "";
+function updateResponsiveBasketButton(){
+  let responsiveBasket = document.getElementById(`responsiveBasketBtn`);
+  let amountTotal = amounts.reduce((acc, curr) => acc + parseFloat(curr), 0);
+  responsiveBasket.innerHTML = `Warenkorb (${amountTotal})`;
 }

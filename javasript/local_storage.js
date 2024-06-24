@@ -18,4 +18,5 @@ function saveLocal() {
       amounts = JSON.parse(amountsAsText);
     }
     updateBasket();
+    updateResponsiveBasketButton();
 }

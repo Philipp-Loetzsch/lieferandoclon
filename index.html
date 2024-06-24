@@ -161,8 +161,22 @@
         </article>
       </section>
     </main>
-    <div id="responsiveBasket"></div>
-    <button id="responsivebasketbtn" tabindex="-1" onclick="showResponsiveBasket()"> Warenkorb</button>
+    <div id="responsiveBasket" class="d-none">
+      <div class="responsive-basket">
+      <div id="contentResponsiveBasket">hi</div>
+      <div id="responsiveSum"></div>
+      <div id="emptyBasketResponsive">
+        <img src="./assets/img/emptybag.png" alt="bag" />
+        <h6>Fülle deinem Warenkorb</h6>
+        <span
+          >Füge einige leckere Gerichte aus der Speisekarte hinzu</span
+        >
+      </div>
+      </div>
+    </div>
+   
+    <button id="responsiveBasketBtn" tabindex="-1" onclick="toggleResponsiveBasket()">Hallo</button>
+    
     <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>
