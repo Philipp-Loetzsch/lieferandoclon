@@ -54,6 +54,9 @@
     color: black;
   }
 }
+#shortcuts::-webkit-scrollbar{
+  display: none;
+}
 #wagon {
   width: 30px;
 }
