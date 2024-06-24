@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./templates/footer.css" />
     <link rel="stylesheet" href="./css/index_media.css" />
     <link rel="stylesheet" href="./css/tagstyle.css" />
+    <link rel="stylesheet" href="./css/templates.css">
     <!-- <script src="test.js"></script> -->
     <script src="./javasript/templates.js"></script>
     <script src="./javasript/local_storage.js"></script>
@@ -19,6 +20,7 @@
     <script src="script.js"></script>
     <script src="./javasript/content.js"></script>
     <script src="./javasript/changeclass.js"></script>
+    <script src="./javasript/scrollchoose.js"></script>
   </head>
   <body onload="includeHTML(); showDishes(); loadLocal()">
     <header w3-include-html="./templates/header.html"></header>
@@ -28,6 +30,7 @@
         <article id="pictureHead">
           <img src="./assets/img/head.jpg" alt="" />
         </article>
+        <img id="logoSachsen" src="./assets/img/logosachsen.png" alt="Sachsenlogo" />
         <article id="store">
           <div class="m-24 store-headline">
             <h3>Feinschmecker Sachsen</h3>
@@ -49,7 +52,7 @@
               /><span>1,50€</span>
             </div>
             <div class="scroll-bar">
-              <button class="scroll-btn">
+              <button onclick="scrollBackward()" class="scroll-btn">
                 <img src="./assets/img/left.png" alt="" />
               </button>
               <div id="shortcuts">
@@ -62,7 +65,7 @@
                 <button><a href="#dessert">Desserts</a></button>
                 <button><a href="#drink">Getränke</a></button>
               </div>
-              <button class="scroll-btn">
+              <button onclick="scrollForward()" class="scroll-btn">
                 <img src="./assets/img/right.png" alt="" />
               </button>
             </div>
@@ -163,20 +166,24 @@
     </main>
     <div id="responsiveBasket" class="d-none">
       <div class="responsive-basket">
-      <div id="contentResponsiveBasket">hi</div>
-      <div id="responsiveSum"></div>
-      <div id="emptyBasketResponsive">
-        <img src="./assets/img/emptybag.png" alt="bag" />
-        <h6>Fülle deinem Warenkorb</h6>
-        <span
-          >Füge einige leckere Gerichte aus der Speisekarte hinzu</span
-        >
-      </div>
+        <div id="contentResponsiveBasket">hi</div>
+        <div id="responsiveSum"></div>
+        <div id="emptyBasketResponsive">
+          <img src="./assets/img/emptybag.png" alt="bag" />
+          <h6>Fülle deinem Warenkorb</h6>
+          <span>Füge einige leckere Gerichte aus der Speisekarte hinzu</span>
+        </div>
       </div>
     </div>
-   
-    <button id="responsiveBasketBtn" tabindex="-1" onclick="toggleResponsiveBasket()">Hallo</button>
-    
+
+    <button
+      id="responsiveBasketBtn"
+      tabindex="-1"
+      onclick="toggleResponsiveBasket()"
+    >
+      Hallo
+    </button>
+
     <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>

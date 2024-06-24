@@ -5,4 +5,7 @@
     .basket-side{
         display: none;
     }
+    h2{
+        display: none;
+    }
 }

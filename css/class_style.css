@@ -10,27 +10,6 @@
   width: 40%;
   box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.3) inset;
 }
-.w-100 {
-  width: 100%;
-}
-.mt-10 {
-  margin-top: 10px;
-}
-.m-24 {
-  margin: 0 24px;
-}
-.mb-8 {
-  margin-bottom: 8px;
-}
-.oh{
-  overflow: hidden;
-}
-.d-none{
-  display: none;
-}
-.d-flex{
-  display: flex;
-}
 .dishcard {
   display: flex;
   flex-direction: column;
@@ -66,10 +45,12 @@
   background-color: white;
   button {
     background-color: transparent;
+    width: 48px;
+    height: 48px;
     border: 0.5px solid rgba(0, 0, 0, 0.397);
-    border-radius: 5px;
+    border-radius: 50%;
     font-size: 24px;
-    color: rgb(0, 0, 0);
+    color: rgb(248, 123, 7);
   }
 }
 .responsivebasket {
