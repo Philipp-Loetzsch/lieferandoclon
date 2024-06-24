@@ -5,30 +5,35 @@ function showDishes() {
     let container = document.getElementById(`choose${category}`);
     let items = menus[category];
     container.innerHTML = "";
-    
-    for(let j = 0; j < items.length; j++){
-    let item = items[j];
-    let price = parseFloat(item.price);
-    let formattedPrice = price.toFixed(2).replace(".", ",");
-    container.innerHTML += createOrderCard(item, formattedPrice);
+
+    for (let j = 0; j < items.length; j++) {
+      let item = items[j];
+      let price = parseFloat(item.price);
+      let formattedPrice = price.toFixed(2).replace(".", ",");
+      container.innerHTML += createOrderCard(item, formattedPrice);
     }
   }
 }
 
-function updateBasket() {
-  let basket = document.getElementById(`orderBasket`);
-  basket.innerHTML = "";
-  for (let i = 0; i < dishes.length; i++) {
-    let price = parseFloat(prices[i]);
-    let formattedPrice = price.toFixed(2).replace(".", ",");
-    basket.innerHTML += createBasket(i, formattedPrice);
+function updateSum(orderSum) {
+  let subTotal = prices.reduce((acc, curr) => acc + parseFloat(curr), 0);
+  let totalSum = subTotal + 1.5;
+  let formattedTotalSum = totalSum.toFixed(2).replace(".", ",");
+  let formattedSubTotal = subTotal.toFixed(2).replace(".", ",");
+  orderSum.innerHTML = createSum(formattedTotalSum, formattedSubTotal);
+}
+
+function orderDone() {
+  if (dishes.length > 0) {
+    dishes = [];
+    prices = [];
+    amounts = [];
+    alert("Ihre Bestellung wurde aufgegeben");
+    saveLocal();
   }
 }
 
-function updateSum(){
-  let orderSum = document.getElementById(`sum`);
-  let totalSum = prices.reduce((acc, curr) => acc + parseFloat(curr), 0);
-  let formattedTotalSum = totalSum.toFixed(2).replace(".", ",");
-  orderSum.innerHTML = createSum(totalSum, formattedTotalSum);
-  
+function showResponsiveBasket(){
+  let responsiveBasket = document.getElementById(`responsiveBasket`);
+  responsiveBasket = "";
 }

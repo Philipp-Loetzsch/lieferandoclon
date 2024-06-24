@@ -39,3 +39,13 @@ function addToBasket(dish, price) {
       saveLocal();
     }
   }
+  function updateBasket() {
+    let basket = document.getElementById(`orderBasket`);
+    basket.innerHTML = "";
+    for (let i = 0; i < dishes.length; i++) {
+      let price = parseFloat(prices[i]);
+      let formattedPrice = price.toFixed(2).replace(".", ",");
+      basket.innerHTML += createBasket(i, formattedPrice);
+    }
+    toggleEmptyBasket();
+  }

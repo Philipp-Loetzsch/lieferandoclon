@@ -25,6 +25,12 @@
 .oh{
   overflow: hidden;
 }
+.d-none{
+  display: none;
+}
+.d-flex{
+  display: flex;
+}
 .dishcard {
   display: flex;
   flex-direction: column;
@@ -124,9 +130,16 @@
 .sum{
   margin-top: 12px;
   border-top: 1px solid rgba(0, 0, 0,0.4);
+  padding: 8px 16px 0 16px;
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+}
+.sum-content{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 8px;
 }

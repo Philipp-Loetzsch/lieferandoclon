@@ -29,8 +29,10 @@ function createBasket(i, formattedPrice) {
 function createSum(totalSum, formattedTotalSum) {
   return /* html */ ` 
   <div class="sum">
-  <div> <span>Zwischensumme:</span> <div>${formattedTotalSum}€</div></div>
-     <div> <span>Lieferkosten:</span> <span>1,50€</span></div>
-     <div> <span>Gesamtpreis:</span> <div>${(totalSum+1.50)}€</div> </div>
+  <div class="sum-content"> <span>Zwischensumme:</span> <div> <b>${formattedTotalSum}€</b></div></div>
+     <div class="sum-content"> <span>Lieferkosten:</span> <span><b>1,50€</b> </span></div>
+     <div class="sum-content"> <span>Gesamtpreis:</span>  <div> <b>${totalSum}€</b></div> </div>
+     <button id="btnOrder" onclick="orderDone()">Bestellen (${totalSum}€)</button>
   </div>`;
 }
+

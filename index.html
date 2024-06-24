@@ -6,19 +6,19 @@
     <title>Lieferandini</title>
     <link rel="shortcut icon" href="/assets/img/logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="tagstyle.css" />
+    <link rel="stylesheet" href="./css/class_style.css" />
     <link rel="stylesheet" href="./templates/header.css" />
     <link rel="stylesheet" href="./templates/footer.css" />
-    <link rel="stylesheet" href="class_style.css" />
-    <link rel="stylesheet" href="index_media.css" />
+    <link rel="stylesheet" href="./css/index_media.css" />
+    <link rel="stylesheet" href="./css/tagstyle.css" />
     <!-- <script src="test.js"></script> -->
-    <script src="templates.js"></script>
-    <script src="local_storage.js"></script>
-    <script src="onload.js"></script>
+    <script src="./javasript/templates.js"></script>
+    <script src="./javasript/local_storage.js"></script>
+    <script src="./javasript/onload.js"></script>
+    <script src="./javasript/basket.js"></script>
     <script src="script.js"></script>
-    <script src="content.js"></script>
-    <script src="basket.js"></script>
-    
+    <script src="./javasript/content.js"></script>
+    <script src="./javasript/changeclass.js"></script>
   </head>
   <body onload="includeHTML(); showDishes(); loadLocal()">
     <header w3-include-html="./templates/header.html"></header>
@@ -56,7 +56,7 @@
                 <button><a href="#soups">Suppen</a></button>
                 <button><a href="#salat">Salate</a></button>
                 <button><a href="#fish">Fisch</a></button>
-                <button><a href="#cow">Rind</a></button>
+                <button><a href="#beef">Rind</a></button>
                 <button><a href="#pork">Schwein</a></button>
                 <button><a href="#noodle">Nudeln</a></button>
                 <button><a href="#dessert">Desserts</a></button>
@@ -72,32 +72,26 @@
             <div>
               <h3>Suppen</h3>
               <span
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                autem quia necessitatibus beatae nihil incidunt, numquam
-                corrupti at molestiae sit ad quas inventore, dolores aut
-                accusantium repudiandae commodi? Ad, omnis?</span
+                >Alle Suppen werden mit frischen Zutaten aus kontrolliert
+                biologischen Anbau zubereitet</span
               >
             </div>
             <div id="choosesoups"></div>
             <img id="salat" src="./assets/img/salat.jpg" alt="Salate" />
             <div>
               <h3>Salate</h3>
-              <span
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                autem quia necessitatibus beatae nihil incidunt, numquam
-                corrupti at molestiae sit ad quas inventore, dolores aut
-                accusantium repudiandae commodi? Ad, omnis?</span
+              <span>
+                Alle Zutaten werden regional erworben und frisch
+                zubereitet</span
               >
             </div>
             <div id="choosesalats"></div>
             <img id="fish" src="./assets/img/fish.jpg" alt="Fisch" />
             <div>
               <h3>Fischgerichte</h3>
-              <span
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                autem quia necessitatibus beatae nihil incidunt, numquam
-                corrupti at molestiae sit ad quas inventore, dolores aut
-                accusantium repudiandae commodi? Ad, omnis?</span
+              <span>
+                Täglich frischer Fisch aus eigener Fischzucht alle Beilagen sind
+                regional und werden frisch zubereitet</span
               >
             </div>
             <div id="choosefishes"></div>
@@ -105,10 +99,8 @@
             <div>
               <h3>Rindfleisch</h3>
               <span
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                autem quia necessitatibus beatae nihil incidunt, numquam
-                corrupti at molestiae sit ad quas inventore, dolores aut
-                accusantium repudiandae commodi? Ad, omnis?</span
+                >Frisches Rindfleisch vom Bio-Hof alle Beilagen sind regional
+                und werden frisch zubereitet</span
               >
             </div>
             <div id="choosebeefs"></div>
@@ -116,10 +108,8 @@
             <div>
               <h3>Schwein</h3>
               <span
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                autem quia necessitatibus beatae nihil incidunt, numquam
-                corrupti at molestiae sit ad quas inventore, dolores aut
-                accusantium repudiandae commodi? Ad, omnis?</span
+                >Frisches Schweinefleisch vom Bio-Hof alle Beilagen sind
+                regional und werden frisch zubereitet</span
               >
             </div>
             <div id="chooseporks"></div>
@@ -127,38 +117,25 @@
             <div>
               <h3>Nudeln</h3>
               <span
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                autem quia necessitatibus beatae nihil incidunt, numquam
-                corrupti at molestiae sit ad quas inventore, dolores aut
-                accusantium repudiandae commodi? Ad, omnis?</span
+                >Alle Nudeln werden mit Urgetreide oder Vollkorn frish
+                zubereitet</span
               >
             </div>
             <div id="choosenoodles"></div>
             <img id="dessert" src="./assets/img/desserts.jpg" alt="Dessert" />
             <div>
               <h3>Desserts</h3>
-              <span
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                autem quia necessitatibus beatae nihil incidunt, numquam
-                corrupti at molestiae sit ad quas inventore, dolores aut
-                accusantium repudiandae commodi? Ad, omnis?</span
-              >
+              <span> Hausgemachte Desserts nach altem Familienrezept</span>
             </div>
             <div id="choosedesserts"></div>
             <img id="drink" src="./assets/img/drinks.jpg" alt="Drinks" />
             <div>
               <h3>Getränke</h3>
-              <span
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                autem quia necessitatibus beatae nihil incidunt, numquam
-                corrupti at molestiae sit ad quas inventore, dolores aut
-                accusantium repudiandae commodi? Ad, omnis?</span
-              >
+              <span>Eine große Auswahl an alkoholfreien Getränken</span>
             </div>
             <div id="choosedrinks"></div>
           </div>
         </article>
-   
       </section>
       <section class="basket-side">
         <article id="basket">
@@ -170,13 +147,22 @@
             <img src="./assets/img/bicycle.png" alt="bicycle" />
             <span>Lieferung 25-60 min </span>
           </div>
-          <div id="orderBasket" class="w-100"></div>
-          <div id="sum"></div>
+          <div class="w-100">
+            <div id="orderBasket" class="w-100"></div>
+            <div id="sum" class="d-none"></div>
+            <div id="emptyBasket">
+              <img src="./assets/img/emptybag.png" alt="bag" />
+              <h6>Fülle deinem Warenkorb</h6>
+              <span
+                >Füge einige leckere Gerichte aus der Speisekarte hinzu</span
+              >
+            </div>
+          </div>
         </article>
-      
       </section>
     </main>
-    <button class="responsivebasket" tabindex="-1">Warenkorb</button>
+    <div id="responsiveBasket"></div>
+    <button id="responsivebasketbtn" tabindex="-1" onclick="showResponsiveBasket()"> Warenkorb</button>
     <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>
