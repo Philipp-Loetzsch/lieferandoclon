@@ -9,3 +9,27 @@ function scrollBackward() {
   let scrollAmount = shortcutsBack.clientWidth * 0.4;
   shortcutsBack.scrollBy({ left: -scrollAmount, behavior: "smooth" });
 }
+
+function showScrollbar(){
+  showScrollbarSide();
+};
+
+function showScrollbarSide(){
+ let maxHeight = document.getElementById(`orderBasket`)
+ if(maxHeight.scrollHeight >= 500)
+  {
+    maxHeight.style.overflowY = "scroll";
+  } else{
+    maxHeight.style.overflowY = "hidden";
+  }
+}
+
+function showScrollbarResponsive(){
+  let maxHeightRespo = document.getElementById(`contentResponsiveBasket`)
+  if(maxHeightRespo.scrollHeight >= 400)
+   {
+     maxHeightRespo.style.overflowY = "scroll";
+   } else{
+     maxHeightRespo.style.overflowY = "hidden";
+   }
+ }

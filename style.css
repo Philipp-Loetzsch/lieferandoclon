@@ -13,6 +13,7 @@
   left: 48px;
   top: -30px;
   width: 40px;
+  border-radius: 5px;
 }
 
 #store {
@@ -29,6 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 8px;
 }
 #shortcuts {
   overflow-x: scroll;
@@ -69,6 +71,7 @@
   overflow-y: scroll;
   max-height: 500px;
 }
+
 #btnOrder {
   border: none;
   font-size: 24px;
@@ -111,7 +114,6 @@
   justify-content: center;
 }
 #contentResponsiveBasket {
-  margin-top: 12px;
   gap: 12px;
   width: 100%;
   display: flex;
@@ -137,4 +139,32 @@
 }
 #responsiveSum {
   margin-bottom: 12px;
+}
+
+#closeBtn{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+  margin: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f39f04; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #eb9a04; 
 }

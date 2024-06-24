@@ -52,4 +52,5 @@ function addToBasket(dish, price) {
       basket2.innerHTML += createBasket(i, formattedPrice);
     }
     toggleEmptyBasket();
+    showScrollbar();
   }
