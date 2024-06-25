@@ -88,6 +88,22 @@
     width: 40px;
   }
 }
+#orderDone{
+  margin-left: 8px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.3) inset;
+  background-color: rgb(255, 254, 255);
+  padding-bottom:40px;
+  img{
+    width: 100%;
+  }
+}
 /* Modal */
 #emptyBasketResponsive {
   height: 100%;
@@ -145,3 +161,18 @@
   align-self: flex-end;
   margin: 20px;
 }
+#orderDoneRepo{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.3) inset;
+  background-color: rgb(255, 254, 254);
+  padding-bottom: 16px;
+  img{
+    width: 50%;
+  }
+ }

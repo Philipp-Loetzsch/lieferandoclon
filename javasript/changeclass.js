@@ -22,4 +22,26 @@ function toggleResponsiveBasket(){
   toolgeResponsiveBasket.classList.toggle("d-none");
   toolgeResponsiveBasket.classList.toggle("d-flex");
   updateBasket();
+  hideOrderDoneRepo();
+}
+
+function showOrderDone(){
+  document.getElementById(`orderDone`).classList.remove("d-none")
+  document.getElementById(`orderDone`).classList.add("d-flex")
+  showOrderDoneRepo();
+}
+
+function hideOrderDone(){
+  document.getElementById(`orderDone`).classList.remove("d-flex")
+  document.getElementById(`orderDone`).classList.add("d-none")
+  hideOrderDoneRepo();
+}
+function showOrderDoneRepo(){
+  document.getElementById(`orderDoneRepo`).classList.remove("d-none")
+  document.getElementById(`orderDoneRepo`).classList.add("d-flex")
+}
+
+function hideOrderDoneRepo(){
+  document.getElementById(`orderDoneRepo`).classList.remove("d-flex")
+  document.getElementById(`orderDoneRepo`).classList.add("d-none")
 }

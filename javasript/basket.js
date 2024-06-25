@@ -9,11 +9,12 @@ function addToBasket(dish, price) {
     prices.push(price);
     amounts.push(1);
   } else if (amounts[indexAdd] >= 9) {
-    return alert("Maximale Anzahl von Bestellungen erreicht");
+    return;
   }
   prices[indexAdd] += price;
   amounts[indexAdd] += 1;
   saveLocal();
+  hideOrderDone();
 }
 
 function removeFromBasket(dish, price) {

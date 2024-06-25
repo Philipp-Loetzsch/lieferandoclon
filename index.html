@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lieferandini</title>
-    <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.svg"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./css/class_style.css" />
-    <link rel="stylesheet" href="./css/scrollbar.css">
+    <link rel="stylesheet" href="./css/scrollbar.css" />
     <link rel="stylesheet" href="./templates/header.css" />
     <link rel="stylesheet" href="./templates/footer.css" />
     <link rel="stylesheet" href="./css/index_media.css" />
     <link rel="stylesheet" href="./css/tagstyle.css" />
-    <link rel="stylesheet" href="./css/templates.css">
-     <script src="./javasript/templates.js"></script>
+    <link rel="stylesheet" href="./css/templates.css" />
+    <script src="./javasript/templates.js"></script>
     <script src="./javasript/local_storage.js"></script>
     <script src="./javasript/onload.js"></script>
     <script src="./javasript/basket.js"></script>
@@ -30,7 +34,11 @@
         <article id="pictureHead">
           <img src="./assets/img/head.jpg" alt="" />
         </article>
-        <img id="logoSachsen" src="./assets/img/logosachsen.png" alt="Sachsenlogo" />
+        <img
+          id="logoSachsen"
+          src="./assets/img/logosachsen.png"
+          alt="Sachsenlogo"
+        />
         <article id="store">
           <div class="m-24 store-headline">
             <h3>Feinschmecker Sachsen</h3>
@@ -75,7 +83,8 @@
             <div>
               <h3>Suppen</h3>
               <span
-                >Alle Suppen werden mit frischen Zutaten aus kontrolliert-biologischem Anbau zubereitet.</span
+                >Alle Suppen werden mit frischen Zutaten aus
+                kontrolliert-biologischem Anbau zubereitet.</span
               >
             </div>
             <div id="choosesoups"></div>
@@ -156,9 +165,14 @@
               <img src="./assets/img/emptybag.png" alt="bag" />
               <h6>Fülle deinem Warenkorb</h6>
               <span
-                >Füge einige leckere Gerichte aus der Speisekarte hinzu</span
-              >
+                >Füge einige leckere Gerichte aus der Speisekarte hinzu</span>
             </div>
+          </div>
+          <div id="orderDone" class="d-none">
+            <img src="./assets/img/confetti.png" alt="" />
+            <h4>Vielen Dank!</h4>
+            <span>Deine Bestellung ist auf dem Weg</span> <br>
+            <button class="new-order" onclick="hideOrderDone()">Neue Bestellung</button>
           </div>
         </article>
       </section>
@@ -173,9 +187,21 @@
           <h6>Fülle deinem Warenkorb</h6>
           <span>Füge einige leckere Gerichte aus der Speisekarte hinzu</span>
         </div>
+        <div id="orderDoneRepo" class="d-flex">
+          <img src="./assets/img/confetti.png" alt="" />
+          <h4>Vielen Dank!</h4>
+          <span>Deine Bestellung ist auf dem Weg</span>
+          <br>
+          <button class="new-order" onclick="toggleResponsiveBasket()">Neue Bestellung</button>
+
+        </div>
       </div>
     </div>
-    <button id="responsiveBasketBtn" tabindex="-1" onclick="toggleResponsiveBasket()"></button>
+    <button
+      id="responsiveBasketBtn"
+      tabindex="-1"
+      onclick="toggleResponsiveBasket()"
+    ></button>
     <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>

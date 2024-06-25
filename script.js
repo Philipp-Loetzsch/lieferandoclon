@@ -30,7 +30,7 @@ function orderDone() {
     dishes = [];
     prices = [];
     amounts = [];
-    alert("Ihre Bestellung wurde aufgegeben");
+    showOrderDone();
     saveLocal();
   }
 }

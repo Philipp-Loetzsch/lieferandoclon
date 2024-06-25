@@ -9,6 +9,11 @@
     display: none;
   }
 }
+@media screen and (max-width: 500px) {
+  #responsiveBasketBtn {
+    font-size: 24px;
+  }
+}
 @media screen and (max-height: 500px) {
   .responsive-basket {
     justify-content: flex-start;
@@ -22,3 +27,4 @@
     display: none;
   }
 }
+
