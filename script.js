@@ -41,8 +41,8 @@ function updateResponsiveBasketButton(){
   if(prices.length > 0){
     priceTotal = priceTotal + 1.5;
     let formattedPriceTotal= priceTotal.toFixed(2).replace(".", ",");
-    responsiveBasket.innerHTML = `Warenkorb (${formattedPriceTotal} €)`;
+    responsiveBasket.innerHTML = `<img src="./assets/img/wagon.png" alt=""> (${formattedPriceTotal} €)`;
   } 
   let formattedPriceTotal= priceTotal.toFixed(2).replace(".", ",");
-  responsiveBasket.innerHTML = `Warenkorb (${formattedPriceTotal} €)`;
+  responsiveBasket.innerHTML = ` <img src="./assets/img/wagon.png" alt=""> (${formattedPriceTotal} €)`;
 }

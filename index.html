@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
@@ -21,9 +21,9 @@
     <script src="./javasript/local_storage.js"></script>
     <script src="./javasript/onload.js"></script>
     <script src="./javasript/basket.js"></script>
-    <script src="script.js"></script>
-    <script src="./javasript/content.js"></script>
     <script src="./javasript/changeclass.js"></script>
+    <script src="script.js"></script>
+    <script src="./javasript/content.js"></script>   
     <script src="./javasript/scrollchoose.js"></script>
   </head>
   <body onload="includeHTML(); showDishes(); loadLocal()">
@@ -165,14 +165,17 @@
               <img src="./assets/img/emptybag.png" alt="bag" />
               <h6>Fülle deinem Warenkorb</h6>
               <span
-                >Füge einige leckere Gerichte aus der Speisekarte hinzu</span>
+                >Füge einige leckere Gerichte aus der Speisekarte hinzu</span
+              >
             </div>
           </div>
           <div id="orderDone" class="d-none">
             <img src="./assets/img/confetti.png" alt="" />
             <h4>Vielen Dank!</h4>
-            <span>Deine Bestellung ist auf dem Weg</span> <br>
-            <button class="new-order" onclick="hideOrderDone()">Neue Bestellung</button>
+            <span>Deine Bestellung ist auf dem Weg</span> <br />
+            <button class="new-order" onclick="hideOrderDone()">
+              Neue Bestellung
+            </button>
           </div>
         </article>
       </section>
@@ -191,17 +194,20 @@
           <img src="./assets/img/confetti.png" alt="" />
           <h4>Vielen Dank!</h4>
           <span>Deine Bestellung ist auf dem Weg</span>
-          <br>
-          <button class="new-order" onclick="toggleResponsiveBasket()">Neue Bestellung</button>
-
+          <br />
+          <button class="new-order" onclick="toggleResponsiveBasket()">
+            Neue Bestellung
+          </button>
         </div>
       </div>
     </div>
-    <button
-      id="responsiveBasketBtn"
-      tabindex="-1"
-      onclick="toggleResponsiveBasket()"
-    ></button>
+    <div id="responsiveIcon">
+      <button
+        id="responsiveBasketBtn"
+        tabindex="-1"
+        onclick="toggleResponsiveBasket()"
+      ></button>
+    </div>
     <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>
