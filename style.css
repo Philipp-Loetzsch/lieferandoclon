@@ -15,7 +15,6 @@
   width: 40px;
   border-radius: 5px;
 }
-
 #store {
   width: 100%;
   padding: 0 24px;
@@ -140,33 +139,10 @@
 #responsiveSum {
   margin-bottom: 12px;
 }
-
 #closeBtn{
   border-radius: 50%;
   min-width: 40px;
   min-height: 40px;
   align-self: flex-end;
   margin: 20px;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #b4b3b3; 
-  border-radius: 5px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #f39f04; 
-  border-radius: 10px;
-  border: #1f1c18;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #eb9a04; 
 }

@@ -12,6 +12,7 @@ function scrollBackward() {
 
 function showScrollbar(){
   showScrollbarSide();
+  showScrollbarResponsive();
 };
 
 function showScrollbarSide(){

@@ -3,54 +3,53 @@ let prices = [];
 let amounts = [];
 
 function addToBasket(dish, price) {
-    let index = dishes.indexOf(dish);
-    if (index == -1) {
-      dishes.push(dish);
-      prices.push(price);
-      amounts.push(1);
-    } else if(amounts[index] >= 9){
-        return alert("Maximale Anzahl von Bestellungen erreicht");
-    } 
-      prices[index] += price;
-      amounts[index] += 1;
-      saveLocal();
+  let indexAdd = dishes.indexOf(dish);
+  if (indexAdd == -1) {
+    dishes.push(dish);
+    prices.push(price);
+    amounts.push(1);
+  } else if (amounts[indexAdd] >= 9) {
+    return alert("Maximale Anzahl von Bestellungen erreicht");
   }
-  
-  function removeFromBasket(dish, price) {
-    let index = dishes.indexOf(dish);
-    if (index != -1) {
-      prices[index] -= price;
-      amounts[index] -= 1;
-      if (amounts[index] <= 0) {
-        dishes.splice(index, 1);
-        prices.splice(index, 1);
-        amounts.splice(index, 1);
-      }
-      saveLocal();
-    }
-  }
-  
-  function removeDishFromBasket(dish) {
-    let index = dishes.indexOf(dish);
-    if (index != -1) {
-      dishes.splice(index, 1);
-      prices.splice(index, 1);
-      amounts.splice(index, 1);
-      saveLocal();
-    }
-  }
+  prices[indexAdd] += price;
+  amounts[indexAdd] += 1;
+  saveLocal();
+}
 
-  function updateBasket() {
-    let basket = document.getElementById(`orderBasket`);
-    let basket2 = document.getElementById(`contentResponsiveBasket`)
-     basket.innerHTML = "";
-     basket2.innerHTML= "";
-    for (let i = 0; i < dishes.length; i++) {
-      let price = parseFloat(prices[i]);
-      let formattedPrice = price.toFixed(2).replace(".", ",");
-      basket.innerHTML += createBasket(i, formattedPrice);
-      basket2.innerHTML += createBasket(i, formattedPrice);
+function removeFromBasket(dish, price) {
+  let indexRemove = dishes.indexOf(dish);
+  if (indexRemove != -1) {
+    prices[indexRemove] -= price;
+    amounts[indexRemove] -= 1;
+    if (amounts[indexRemove] <= 0) {
+      dishes.splice(indexRemove, 1);
+      prices.splice(indexRemove, 1);
+      amounts.splice(indexRemove, 1);
     }
-    toggleEmptyBasket();
-    showScrollbar();
+    saveLocal();
   }
+}
+
+function removeDishFromBasket(dish) {
+  let indexDelete = dishes.indexOf(dish);
+  if (indexDelete != -1) {
+    dishes.splice(indexDelete, 1);
+    prices.splice(indexDelete, 1);
+    amounts.splice(indexDelete, 1);
+    saveLocal();
+  }
+}
+
+function updateBasket() {
+  let basket = document.getElementById(`orderBasket`);
+  let basketRepo = document.getElementById(`contentResponsiveBasket`);
+  basket.innerHTML = "";
+  basketRepo.innerHTML = "";
+  for (let i = 0; i < dishes.length; i++) {
+    let formattedPrice = parseFloat(prices[i]).toFixed(2).replace(".", ",");
+    basket.innerHTML += createBasket(i, formattedPrice);
+    basketRepo.innerHTML += createBasket(i, formattedPrice);
+  }
+  toggleEmptyBasket();
+  showScrollbar();
+}
