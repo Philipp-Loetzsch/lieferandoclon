@@ -23,7 +23,6 @@ function updateSum(orderSum, orderResponsiveSum) {
   let formattedSubTotal = subTotal.toFixed(2).replace(".", ",");
   orderSum.innerHTML = createSum(formattedTotalSum, formattedSubTotal);
   orderResponsiveSum.innerHTML = createSum(formattedTotalSum, formattedSubTotal);
-  
 }
 
 function orderDone() {

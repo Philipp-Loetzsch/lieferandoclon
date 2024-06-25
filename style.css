@@ -70,7 +70,6 @@
   overflow-y: scroll;
   max-height: 500px;
 }
-
 #btnOrder {
   border: none;
   font-size: 24px;
@@ -90,6 +89,7 @@
     width: 40px;
   }
 }
+/* Modal */
 #emptyBasketResponsive {
   height: 100%;
   flex-direction: column;

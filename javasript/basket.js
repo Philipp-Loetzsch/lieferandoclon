@@ -51,5 +51,6 @@ function updateBasket() {
     basketRepo.innerHTML += createBasket(i, formattedPrice);
   }
   toggleEmptyBasket();
-  showScrollbar();
+  showScrollbarSide();
+  showScrollbarResponsive();
 }

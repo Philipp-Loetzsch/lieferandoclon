@@ -10,11 +10,6 @@ function scrollBackward() {
   shortcutsBack.scrollBy({ left: -scrollAmount, behavior: "smooth" });
 }
 
-function showScrollbar(){
-  showScrollbarSide();
-  showScrollbarResponsive();
-};
-
 function showScrollbarSide(){
  let maxHeightSidbar = document.getElementById(`orderBasket`)
  let maxHeight = maxHeightSidbar.clientHeight;
