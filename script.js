@@ -37,7 +37,12 @@ function orderDone() {
 
 function updateResponsiveBasketButton(){
   let responsiveBasket = document.getElementById(`responsiveBasketBtn`);
-  let priceTotal = prices.reduce((acc, curr) => acc + parseFloat(curr), 0) + 1.5;
+  let priceTotal = prices.reduce((acc, curr) => acc + parseFloat(curr), 0);
+  if(prices.length > 0){
+    priceTotal = priceTotal + 1.5;
+    let formattedPriceTotal= priceTotal.toFixed(2).replace(".", ",");
+    responsiveBasket.innerHTML = `Warenkorb (${formattedPriceTotal} €)`;
+  } 
   let formattedPriceTotal= priceTotal.toFixed(2).replace(".", ",");
   responsiveBasket.innerHTML = `Warenkorb (${formattedPriceTotal} €)`;
 }
