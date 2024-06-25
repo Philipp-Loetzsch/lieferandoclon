@@ -86,17 +86,17 @@
   justify-content: center;
   align-items: center;
 }
-.basket-content{
+.basket-content {
   display: flex;
   justify-content: space-around;
   gap: 20px;
 }
-.btn-basket{
+.btn-basket {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  button{
+  button {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -105,14 +105,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    img{
+    img {
       width: 20px;
     }
   }
 }
-.sum{
+.sum {
   margin-top: 12px;
-  border-top: 1px solid rgba(0, 0, 0,0.4);
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
   padding: 8px 16px 0 16px;
   box-sizing: border-box;
   width: 100%;
@@ -120,17 +120,17 @@
   flex-direction: column;
   align-items: center;
 }
-.sum-content{
+.sum-content {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding-top: 8px;
 }
-.responsive-basket{
+.responsive-basket {
   width: 100%;
   min-height: 500px;
   background-color: rgb(255, 255, 255);
   justify-content: space-between;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

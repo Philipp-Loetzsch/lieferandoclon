@@ -1,11 +1,24 @@
 @media screen and (max-width: 950px) {
-    #responsiveBasketBtn{
-        display: flex;
-    }
-    .basket-side{
-        display: none;
-    }
-    h2{
-        display: none;
-    }
+  #responsiveBasketBtn {
+    display: flex;
+  }
+  .basket-side {
+    display: none;
+  }
+  h2 {
+    display: none;
+  }
+}
+@media screen and (max-height: 500px) {
+  .responsive-basket {
+    justify-content: flex-start;
+  }
+  #contentResponsiveBasket {
+    max-height: 150px;
+  }
+}
+@media screen and (min-width: 951px) {
+  #responsiveBasket {
+    display: none;
+  }
 }

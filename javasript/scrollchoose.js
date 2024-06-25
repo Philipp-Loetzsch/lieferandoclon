@@ -16,8 +16,9 @@ function showScrollbar(){
 };
 
 function showScrollbarSide(){
- let maxHeight = document.getElementById(`orderBasket`)
- if(maxHeight.scrollHeight >= 500)
+ let maxHeightSidbar = document.getElementById(`orderBasket`)
+ let maxHeight = maxHeightSidbar.clientHeight;
+ if(maxHeight.scrollHeight >= maxHeight)
   {
     maxHeight.style.overflowY = "scroll";
   } else{
@@ -25,12 +26,13 @@ function showScrollbarSide(){
   }
 }
 
-function showScrollbarResponsive(){
-  let maxHeightRespo = document.getElementById(`contentResponsiveBasket`)
-  if(maxHeightRespo.scrollHeight >= 400)
-   {
-     maxHeightRespo.style.overflowY = "scroll";
-   } else{
-     maxHeightRespo.style.overflowY = "hidden";
-   }
- }
+function showScrollbarResponsive() {
+  let maxHeightRespo = document.getElementById(`contentResponsiveBasket`);
+  let maxHeight = maxHeightRespo.clientHeight;
+
+  if (maxHeightRespo.scrollHeight >= maxHeight) {
+    maxHeightRespo.style.overflowY = "scroll";
+  } else {
+    maxHeightRespo.style.overflowY = "hidden";
+  }
+}

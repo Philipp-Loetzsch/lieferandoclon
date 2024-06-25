@@ -38,6 +38,7 @@ function orderDone() {
 
 function updateResponsiveBasketButton(){
   let responsiveBasket = document.getElementById(`responsiveBasketBtn`);
-  let amountTotal = amounts.reduce((acc, curr) => acc + parseFloat(curr), 0);
-  responsiveBasket.innerHTML = `Warenkorb (${amountTotal})`;
+  let priceTotal = prices.reduce((acc, curr) => acc + parseFloat(curr), 0) + 1.5;
+  let formattedPriceTotal= priceTotal.toFixed(2).replace(".", ",");
+  responsiveBasket.innerHTML = `Warenkorb (${formattedPriceTotal} €)`;
 }
