@@ -11,20 +11,18 @@ function scrollBackward() {
 }
 
 function showScrollbarSide(){
- let maxHeightSidbar = document.getElementById(`orderBasket`)
- let maxHeight = maxHeightSidbar.clientHeight;
- if(maxHeight.scrollHeight >= maxHeight)
-  {
-    maxHeight.style.overflowY = "scroll";
-  } else{
-    maxHeight.style.overflowY = "hidden";
+ let maxHeightSidebar = document.getElementById(`orderBasket`)
+ let maxHeight = maxHeightSidebar.clientHeight;
+ if(maxHeightSidebar.scrollHeight >= maxHeight) {
+    maxHeightSidebar.style.overflowY = "scroll";
+  } else {
+    maxHeightSidebar.style.overflowY = "hidden";
   }
 }
 
 function showScrollbarResponsive() {
   let maxHeightRespo = document.getElementById(`contentResponsiveBasket`);
   let maxHeight = maxHeightRespo.clientHeight;
-
   if (maxHeightRespo.scrollHeight >= maxHeight) {
     maxHeightRespo.style.overflowY = "scroll";
   } else {
