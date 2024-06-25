@@ -12,7 +12,7 @@ let menus = {
     },
     {
       dish: ["Kürbissuppe"],
-      description: ["Suppe aus frischen Kürbis"],
+      description: ["Suppe aus frischem Kürbis"],
       price: [4.8]
     },
     {
@@ -60,7 +60,7 @@ let menus = {
       price: [8.4]
     },
     {
-      dish: ["Einmarinierter Hering"],
+      dish: ["Marinierter Hering"],
       description: ["Heringsfilets mit Äpfeln und Zwiebeln"],
       price: [10.6]
     }
@@ -68,7 +68,7 @@ let menus = {
   beefs: [
     {
       dish: ["Rinderhacksteak"],
-      description: ["Gehacktes Rindfleisch mit Kartoffeln, Gemüße und brauner Soße"],
+      description: ["Gehacktes Rindfleisch mit Kartoffeln, Gemüse und brauner Soße"],
       price: [8.4]
     },
     {
@@ -96,7 +96,7 @@ let menus = {
     {
       dish: ["Pulled Pork"],
       description: ["zarter Schweinebraten direkt vom Grill"],
-      price: [15.7]
+      price: [12.7]
     }
   ],
   noodles: [
@@ -147,7 +147,7 @@ let menus = {
     {
       dish: ["Hausgemachte Limonade"],
       description: ["0,3l Glas mit unserer hausgemachten Limonade"],
-      price: [6.7]
+      price: [3.4]
     }
   ]
 };
