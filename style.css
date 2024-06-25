@@ -67,7 +67,6 @@
   margin-top: 24px;
   gap: 8px;
   box-sizing: border-box;
-  overflow-y: scroll;
   max-height: 500px;
 }
 #btnOrder {

@@ -12,8 +12,7 @@ function scrollBackward() {
 
 function showScrollbarSide(){
  let maxHeightSidebar = document.getElementById(`orderBasket`)
- let maxHeight = maxHeightSidebar.clientHeight;
- if(maxHeightSidebar.scrollHeight >= maxHeight) {
+ if(maxHeightSidebar.scrollHeight >= 500) {
     maxHeightSidebar.style.overflowY = "scroll";
   } else {
     maxHeightSidebar.style.overflowY = "hidden";
