@@ -6,37 +6,37 @@
     <title>Lieferandini</title>
     <link
       rel="shortcut icon"
-      href="./assets/img/logo.svg"
+      href="assets/img/logo.svg"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./css/class_style.css" />
-    <link rel="stylesheet" href="./css/scrollbar.css" />
-    <link rel="stylesheet" href="./templates/header.css" />
-    <link rel="stylesheet" href="./templates/footer.css" />
-    <link rel="stylesheet" href="./css/index_media.css" />
-    <link rel="stylesheet" href="./css/tagstyle.css" />
-    <link rel="stylesheet" href="./css/templates.css" />
-    <script src="./javasript/templates.js"></script>
-    <script src="./javasript/local_storage.js"></script>
-    <script src="./javasript/onload.js"></script>
-    <script src="./javasript/basket.js"></script>
-    <script src="./javasript/changeclass.js"></script>
+    <link rel="stylesheet" href="css/class_style.css" />
+    <link rel="stylesheet" href="css/scrollbar.css" />
+    <link rel="stylesheet" href="templates/header.css" />
+    <link rel="stylesheet" href="templates/footer.css" />
+    <link rel="stylesheet" href="css/index_media.css" />
+    <link rel="stylesheet" href="css/tagstyle.css" />
+    <link rel="stylesheet" href="css/templates.css" />
+    <script src="javasript/templates.js"></script>
+    <script src="javasript/local_storage.js"></script>
+    <script src="javasript/onload.js"></script>
+    <script src="javasript/basket.js"></script>
+    <script src="javasript/changeclass.js"></script>
     <script src="script.js"></script>
-    <script src="./javasript/content.js"></script>   
-    <script src="./javasript/scrollchoose.js"></script>
+    <script src="javasript/content.js"></script>   
+    <script src="javasript/scrollchoose.js"></script>
   </head>
   <body onload="includeHTML(); showDishes(); loadLocal()">
-    <header w3-include-html="./templates/header.html"></header>
+    <header w3-include-html="templates/header.html"></header>
 
     <main>
       <section class="w-100 oh">
         <article id="pictureHead">
-          <img src="./assets/img/head.jpg" alt="" />
+          <img src="assets/img/head.jpg" alt="" />
         </article>
         <img
           id="logoSachsen"
-          src="./assets/img/logosachsen.png"
+          src="assets/img/logosachsen.png"
           alt="Sachsenlogo"
         />
         <article id="store">
@@ -45,23 +45,23 @@
             <div class="center mb-8">
               <img
                 class="headicons"
-                src="./assets/img/star.png"
+                src="assets/img/star.png"
                 alt="star"
               /><span>4.7 (300+)</span>
             </div>
             <div class="center mb-8">
-              <img class="headicons" src="./assets/img/bag.png" alt="bag" />
+              <img class="headicons" src="assets/img/bag.png" alt="bag" />
               <span>Min. 15,00€ </span>
-              <img src="./assets/img/dot.svg" alt="dot" />
+              <img src="assets/img/dot.svg" alt="dot" />
               <img
                 class="headicons"
-                src="./assets/img/bicycle.png"
+                src="assets/img/bicycle.png"
                 alt="bicycle"
               /><span>1,50€</span>
             </div>
             <div class="scroll-bar">
               <button onclick="scrollBackward()" class="scroll-btn">
-                <img src="./assets/img/left.png" alt="" />
+                <img src="assets/img/left.png" alt="" />
               </button>
               <div id="shortcuts">
                 <button><a href="#soups">Suppen</a></button>
@@ -74,12 +74,12 @@
                 <button><a href="#drink">Getränke</a></button>
               </div>
               <button onclick="scrollForward()" class="scroll-btn">
-                <img src="./assets/img/right.png" alt="" />
+                <img src="assets/img/right.png" alt="" />
               </button>
             </div>
           </div>
           <div class="dishselection">
-            <img id="soups" src="./assets/img/soup.jpg" alt="Suppe" />
+            <img id="soups" src="assets/img/soup.jpg" alt="Suppe" />
             <div>
               <h3>Suppen</h3>
               <span
@@ -88,7 +88,7 @@
               >
             </div>
             <div id="choosesoups"></div>
-            <img id="salat" src="./assets/img/salat.jpg" alt="Salate" />
+            <img id="salat" src="assets/img/salat.jpg" alt="Salate" />
             <div>
               <h3>Salate</h3>
               <span>
@@ -97,7 +97,7 @@
               >
             </div>
             <div id="choosesalats"></div>
-            <img id="fish" src="./assets/img/fish.jpg" alt="Fisch" />
+            <img id="fish" src="assets/img/fish.jpg" alt="Fisch" />
             <div>
               <h3>Fischgerichte</h3>
               <span>
@@ -106,7 +106,7 @@
               >
             </div>
             <div id="choosefishes"></div>
-            <img id="beef" src="./assets/img/cow.jpg" alt="Cow" />
+            <img id="beef" src="assets/img/cow.jpg" alt="Cow" />
             <div>
               <h3>Rindfleisch</h3>
               <span
@@ -115,7 +115,7 @@
               >
             </div>
             <div id="choosebeefs"></div>
-            <img id="pork" src="./assets/img/pork.jpg" alt="Pork" />
+            <img id="pork" src="assets/img/pork.jpg" alt="Pork" />
             <div>
               <h3>Schwein</h3>
               <span
@@ -124,7 +124,7 @@
               >
             </div>
             <div id="chooseporks"></div>
-            <img id="noodle" src="./assets/img/noodle.jpg" alt="Noodles" />
+            <img id="noodle" src="assets/img/noodle.jpg" alt="Noodles" />
             <div>
               <h3>Nudeln</h3>
               <span
@@ -133,13 +133,13 @@
               >
             </div>
             <div id="choosenoodles"></div>
-            <img id="dessert" src="./assets/img/desserts.jpg" alt="Dessert" />
+            <img id="dessert" src="assets/img/desserts.jpg" alt="Dessert" />
             <div>
               <h3>Desserts</h3>
               <span> Hausgemachte Desserts nach altem Familienrezept</span>
             </div>
             <div id="choosedesserts"></div>
-            <img id="drink" src="./assets/img/drinks.jpg" alt="Drinks" />
+            <img id="drink" src="assets/img/drinks.jpg" alt="Drinks" />
             <div>
               <h3>Getränke</h3>
               <span>Eine große Auswahl an alkoholfreien Getränken</span>
@@ -151,18 +151,18 @@
       <section class="basket-side">
         <article id="basket">
           <div class="center mt-10">
-            <img id="wagon" src="./assets/img/wagon.png" alt="wagon" />
+            <img id="wagon" src="assets/img/wagon.png" alt="wagon" />
             <h5>Warenkorb</h5>
           </div>
           <div class="center mt-10">
-            <img src="./assets/img/bicycle.png" alt="bicycle" />
+            <img src="assets/img/bicycle.png" alt="bicycle" />
             <span>Lieferung 25-60 min </span>
           </div>
           <div class="w-100">
             <div id="orderBasket" class="w-100"></div>
             <div id="sum" class="d-none"></div>
             <div id="emptyBasket">
-              <img src="./assets/img/emptybag.png" alt="bag" />
+              <img src="assets/img/emptybag.png" alt="bag" />
               <h6>Fülle deinem Warenkorb</h6>
               <span
                 >Füge einige leckere Gerichte aus der Speisekarte hinzu</span
@@ -170,7 +170,7 @@
             </div>
           </div>
           <div id="orderDone" class="d-none">
-            <img src="./assets/img/confetti.png" alt="" />
+            <img src="assets/img/confetti.png" alt="" />
             <h4>Vielen Dank!</h4>
             <span>Deine Bestellung ist auf dem Weg</span> <br />
             <button class="new-order" onclick="hideOrderDone()">
@@ -186,12 +186,12 @@
         <div id="contentResponsiveBasket">hi</div>
         <div id="responsiveSum"></div>
         <div id="emptyBasketResponsive">
-          <img src="./assets/img/emptybag.png" alt="bag" />
+          <img src="assets/img/emptybag.png" alt="bag" />
           <h6>Fülle deinem Warenkorb</h6>
           <span>Füge einige leckere Gerichte aus der Speisekarte hinzu</span>
         </div>
         <div id="orderDoneRepo" class="d-flex">
-          <img src="./assets/img/confetti.png" alt="" />
+          <img src="assets/img/confetti.png" alt="" />
           <h4>Vielen Dank!</h4>
           <span>Deine Bestellung ist auf dem Weg</span>
           <br />
@@ -208,6 +208,6 @@
         onclick="toggleResponsiveBasket()"
       ></button>
     </div>
-    <footer w3-include-html="./templates/footer.html"></footer>
+    <footer w3-include-html="templates/footer.html"></footer>
   </body>
 </html>
